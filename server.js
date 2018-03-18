@@ -9,8 +9,9 @@ const app = express();
 
 var identified = false;
 
-const mongoDB1 = process.env.SECRET1; // admin
-const mongoDB = process.env.SECRET2; // visitor
+const mongoDB1 = process.env.SECRET1; // admin. Replace with your MongoDB password
+// example: mongodb://myUsername:MYpassword111@dsXXXXX.mlab.com:11309/superDataBase1
+const mongoDB = process.env.SECRET2; // visitor Replace with your MongoDB password
 mongoose.connect(mongoDB); // change this if need db admin
 mongoose.Promise = global.Promise;
 const db = mongoose.connection;
